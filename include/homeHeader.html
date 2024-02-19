@@ -1,0 +1,33 @@
+
+<!-- home-header -->
+<header class="home">
+  <div class="inner">
+    <div class="logo">
+      <a href="/"><img src="/images/logo_WH.png" alt=""></a>
+    </div>
+    <nav>
+      <ul>
+        <!-- <li><a href="/index.html">Home</a></li> -->
+        <li><a href="/company.html">회사소개</a></li>
+        <li><a href="/strategy.html">사업분야</a></li>
+        <li><a href="/incruit.html">인사제도</a></li>
+        <li><a href="/contact.html">문의하기</a></li>
+        <li><a href="#"><span class="material-symbols-outlined">
+          public
+          </span></a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="trigger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<script>
+$('header .trigger').click(function(){
+  $(this).toggleClass('active')
+  $('nav').toggleClass('active')
+})
+</script>

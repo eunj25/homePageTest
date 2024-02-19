@@ -1,0 +1,309 @@
+@media (min-width: 320px) and (max-width: 768px) {
+  /* common css */
+  body {
+    /* font-size: 62.5%; */
+  }
+  h1 {
+    width: 100%;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 3vw;
+    background-color: #fff;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  } 
+  header .inner {
+    width: 100%;
+    padding: 0;
+  }
+  header nav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: var(--grey-300);
+    transition: 0.35s;
+  }
+  header nav.active {
+    left: 0;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 15vw;
+  }
+  nav ul li {
+    width: 100%;
+    padding: 3vw 8vw;
+  }
+  nav ul li a {
+    width: 100%;
+    display: inline-block;
+    font-size: var(--font-Regular);
+  }
+  /* trigger */
+  header .trigger {
+    display: block;
+    width: 25px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.35s;
+  }
+  header .trigger span {
+    background-color: #333;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    transition: 0.35s;
+    z-index: 99999;
+  }
+  header .trigger span:nth-child(1) {
+    top: 0;
+  }
+  header .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  header .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  header .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  header .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  header .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  /* header home */
+  header.home {
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+  }
+  header.home .trigger span {
+    background-color: #fff;
+  }
+  header .trigger.active span {
+    background-color: #333;
+  }
+  header.home nav ul li a {
+    color: #333;
+  }
+  header.home nav ul li a:hover {
+    color: var(--premary-600);
+  }
+  /* footer */
+  footer {
+    padding: 5vw;
+  }
+  footer .footer_inner {
+    flex-direction: column;
+    gap: 10vw;
+  }
+  footer .contact {
+    height: auto;
+  }
+  footer .contact p {
+    font-size: 1.4rem;
+  }
+
+  /* sub-page */
+  .sub_page .menu {
+    display: none;
+  }
+  input,textarea {
+    margin-bottom: 2vw;
+    padding: 2vw 4vw;
+  }
+  section.sub_page .content {
+    margin-bottom: 20vw;
+  } 
+  section.sub_page .sub_banner {
+    padding: 10vw;
+  }
+
+  section.sub_page .sub_banner h1 {
+    margin-top: 10vw;
+    text-align: center;
+  }
+  section.sub_page .sub_banner p {
+    line-height: 1.5em;
+    text-align: center;
+    font-size: var(--font-small);
+  }
+  section.sub_page .content .title {
+    margin-bottom: var( --padding-title-mb);
+  }
+
+  /* == index.html == */
+  section.intro .bg {
+  }
+  section.intro .bg img {
+    bottom: 0;
+    animation: none;
+    object-fit: cover;
+  }
+  section.intro .intro_title {
+    text-align: left;
+    line-height: 1.5em;
+    left: 0;
+    padding: 0 3vw;
+  }
+  section.intro .intro_title span {
+    font-weight: normal;
+    padding-top: 1.5vw;
+    display: inline-block;
+    width: 100%;
+  }
+  section.intro .scroll_icon {
+    display: none;
+  }
+  .full_box .home_title {
+    width: 80vw;
+  }
+  .scroll_box .home_desc {
+    position: absolute;
+    bottom: 10%;
+    left: 12%;
+    border-bottom: 1px solid #f9f9f980;
+    padding: 3vw 3vw;
+    width: 75%;
+    font-size: var(--font-Regular);
+  }
+  section.shortbanner .shortbanner_inner {
+    flex-direction: column;
+  }
+  section.shortbanner .short_box {
+    width: 100%;
+    flex: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 80vh;
+    padding: 30vw 9vw;
+    background-size: cover;
+  }
+  section.shortbanner .short_box:hover {
+    background-size: cover;
+  }
+  section.contact .short_title h1 {
+    font-size: var(--font-medium);
+  }
+
+  /* == company == */
+  section.sub_page .contents .headline p {
+    padding: var(--padding-title-mb) 0;
+  }
+  .company_inner .history .history_box {
+    padding: var(--padding-list-mb);
+    align-items: flex-start;
+    gap: 5vw;
+    flex-direction: column;
+  }
+  section.sub_page .content .items_box {
+    flex-direction: column;
+  }
+  section.sub_page .content .items_box .item {
+    width: 100%;
+  }
+  .company_inner .structure .photo {
+    width: 85%;
+    margin: auto;
+  }
+  .company_inner .about_box .item h1 {
+    padding-bottom: var(--padding-title-mb);
+  }
+  /* == strategy == */
+  section.strategy .benefits_box .item {
+    width: calc(100%/1.7);
+    padding: 10vw 0;
+  }
+  section.sub_page .content.rpa .items_box .item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 4vw;
+  }
+  section.strategy .content.rpa .items_box h1 {
+    width: 50%;
+  } 
+  section.strategy .items_box ul {
+    width: 50%;
+  }
+  section.strategy .Uipath .photo {
+    width: 100%;
+  }
+  section.strategy .services .headline p {
+    width: 65%;
+  }
+  section.strategy .services .items_box .desc button {
+    margin-top: 8vw;
+  }
+  /* == incruit == */
+  section.incruit .contents .content.inc .title {
+    margin-bottom: var(--padding-title-mb);
+  }
+  .incruit_inner .inc_box .item {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .incruit_inner .inc_box .item .photo {
+    width: 100%;
+  }
+  .incruit_inner .inc_box .item .desc {
+    padding: 8vw;
+    width: 100%;
+  }
+  .incruit_inner .inc_box .item h1 {
+    margin-bottom: 4vw;
+  }
+  .incruit_inner .inc_box .item h1::before {
+    top: -25vw;
+  }
+  .incruit_inner .inc_box .item p {
+    width: 100%;
+  }
+  .incruit_inner .wel_box .item {
+    width: calc(100%/2);
+    background-color: #fff;
+    padding: 3vw 1vw 0 3vw;
+  }
+  .incruit_inner .wel_box .item:nth-child(3n), 
+  .incruit_inner .wel_box .item:nth-child(2),
+  .incruit_inner .wel_box .item:nth-child(7) {
+    background-color: #f5f5f5;
+  }
+  .incruit_inner .wel_box .item p {
+    font-size: 1.4rem;
+  }
+  .incruit_inner .wel_box .item .photo {
+    width: 140px;
+    height: 142px;
+  }
+  /* == contact == */
+  section.contact .contact_inner {
+    width: 100%;
+    padding: var(--padding-list-mb);
+  }
+  section.contact .contact_box {
+    width: 100%;
+  }
+  section.contact .contact_box .title {
+    padding-bottom: 2.5vw;
+  }
+
+
+}
