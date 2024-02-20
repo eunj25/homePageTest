@@ -22,8 +22,9 @@
   --padding-list: 1.77vw;
   --padding-title: 2.53vw;
   --padding-badge: 0.2vw 0.5vw;
-  --padding-title-mb: 8vw;
-  --padding-list-mb: 8vw 4vw;;
+  --padding-sub-mb: 5vw;
+  --padding-title-mb: 4vw;
+  --padding-list-mb: 8vw 4vw;
 
   /* Font Size */
   --font-large: 4.8rem;
